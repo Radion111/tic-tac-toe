@@ -1,0 +1,303 @@
+@charset "UTF-8";
+
+/*Обнуление*/
+* {
+   padding: 0;
+   margin: 0;
+   border: 0;
+}
+
+*,
+*:before,
+*:after {
+   -webkit-box-sizing: border-box;
+   box-sizing: border-box;
+}
+
+:focus,
+:active {
+   outline: none;
+}
+
+a:focus,
+a:active {
+   outline: none;
+}
+
+nav,
+footer,
+header,
+aside {
+   display: block;
+}
+
+html,
+body {
+   height: 100%;
+   width: 100%;
+   font-size: 100%;
+   line-height: 1;
+   font-size: 14px;
+   -ms-text-size-adjust: 100%;
+   -moz-text-size-adjust: 100%;
+   -webkit-text-size-adjust: 100%;
+}
+
+input,
+button,
+textarea {
+   font-family: inherit;
+}
+
+input::-ms-clear {
+   display: none;
+}
+
+button {
+   cursor: pointer;
+}
+
+button::-moz-focus-inner {
+   padding: 0;
+   border: 0;
+}
+
+a,
+a:visited {
+   text-decoration: none;
+}
+
+a:hover {
+   text-decoration: none;
+}
+
+ul li {
+   list-style: none;
+}
+
+img {
+   vertical-align: top;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+   font-size: inherit;
+   font-weight: 400;
+}
+
+/*Обнуление окончания*/
+body {
+   height: 100%;
+   font-family: "Roboto-Bold";
+}
+
+
+// для потключения @include adaptiv-font(40, 18)
+
+
+
+
+.wrapper {
+
+   height: 100%;
+   max-width: 1920px;
+   margin: 0 auto;
+
+
+   // ! Если хочешь использовать респонсив адаптивность использует эти свойства
+   // display: flex;
+   // flex-direction: column;
+   // min-height: 100vh;
+
+
+}
+
+.container {
+   max-width: 1920px;
+   padding: 0px 15px;
+   //! Увеличиваем контейнер на 30 px И убираем эти 30 px c помощью paddinga 0px 15px;
+   margin: 0 auto;
+   height: 100%;
+
+}
+
+main {
+   height: 100%;
+   width: 100%;
+}
+
+.main {
+
+   height: 100%;
+   width: 100%;
+
+   background-color: #14bdac;
+
+   &__body {
+      text-align: center;
+      width: 400px;
+      height: 400px;
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+   }
+
+   &__mmain {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+   }
+
+
+
+
+   &__row {
+      background-color: #0da192;
+      position: relative;
+      z-index: 1;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      align-items: flex-end;
+      justify-content: space-between;
+
+      padding: 20px;
+
+      @media(max-width:400px) {
+         padding: 10px;
+
+      }
+
+      &:first-child {
+         padding-top: 0px;
+         padding-right: 0px;
+         padding-left: 0px;
+      }
+
+      &:nth-child(2) {
+         padding-right: 0px;
+         padding-left: 0px;
+         padding-top: 0px;
+         padding-bottom: 0px;
+      }
+
+      &:last-child {
+         padding-right: 0px;
+         padding-left: 0px;
+         padding-bottom: 0px;
+
+      }
+   }
+
+   &__alink {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      z-index: 2;
+      width: 100px;
+      text-align: center;
+      justify-content: center;
+      height: 100px;
+
+      cursor: pointer;
+      background-color: #14bdac;
+
+      @media(max-width:400px) {
+         width: 75px;
+         height: 75px;
+
+      }
+
+      span {
+
+         font-size: 60px;
+         font-weight: 900;
+
+         display: block;
+         align-items: center;
+      }
+
+      margin-right: 20px;
+
+      &:last-child {
+         margin-right: 0px;
+
+      }
+
+
+
+   }
+}
+
+.noll {
+
+   color: #545454;
+}
+
+.krest {
+   color: #f2ebd3;
+}
+
+
+
+.main {
+
+   &__hode {
+      padding-top: 50px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      @media(max-width:450px) {
+         padding-top: 20px;
+      }
+      
+   }
+
+   &__krestuki {
+      display: flex;
+      justify-content: space-between;
+      margin-right: 60px;
+      align-items: center;
+      padding: 20px 12px;
+      width: 100px;
+      background-color: white;
+      border-radius: 20px;
+
+      &.active {
+
+         border-bottom: 4px solid orange;
+      }
+   }
+
+   &__znak {
+      font-size: 55px;
+      font-weight: 600;
+   }
+
+   &__info {
+      font-size: 55px;
+      font-weight: 600;
+   }
+
+   &__noliki {
+      width: 100px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 12px;
+      background-color: white;
+      border-radius: 20px;
+
+      &.active {
+         border-bottom: 4px solid orange;
+      }
+   }
+}
