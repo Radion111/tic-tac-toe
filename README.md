@@ -1,2 +1,2 @@
 # tic-tac-toe
-tic tac toe on native javascript  
+javascript games tic tac toe
